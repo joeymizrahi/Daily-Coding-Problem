@@ -3,7 +3,7 @@
 Solving the daily problems created by this site: https://www.dailycodingproblem.com/ 
 
 <div class="text-purple">
-   <b>Info to contributers: you can enter the folder of a certain problem, and then put your solution under the name "solution_1.py" for example of a python solution</b>
+   Info to contributers: you can enter the folder of a certain problem, and then put your solution under the name "solution_1.py" for example of a python solution
 </div>
 ---
 
