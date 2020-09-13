@@ -2,9 +2,9 @@
 
 Solving the daily problems created by this site: https://www.dailycodingproblem.com/ 
 
-<p style="color:blue">
-   Info to contributers: you can enter the folder of a certain problem, and then put your solution under the name "solution_1.py" for example of a python solution
-</p>
+
+<h1> <b>Info to contributers: you can enter the folder of a certain problem, and then put your solution under the name "solution_1.py" for example of a python solution</b></h1>
+
 ---
 
 #### Problem 1
