@@ -1,7 +1,6 @@
 <p ><img src="https://pbs.twimg.com/profile_images/980694592151523328/0RI8hKGP.jpg" width="50" title="hover text"><h1> Daily-Coding-Problem  </h1></p>
 
-Solving the daily problems created by this site: https://www.dailycodingproblem.com/ 
-
+Solving the daily problems created by this site: https://www.dailycodingproblem.com/
 
 <h3> <b>Info to contributers: you can enter the folder of a certain problem, and then put your solution under the name "solution_1.py" for example of a python solution</b></h3>
 
@@ -14,7 +13,7 @@ For example, given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17.
 
 Bonus: Can you do this in one pass?
 
-[Solution](solutions/problem_001.py)
+[Solution](solutions/problem_001/solution.py)
 
 ---
 
@@ -28,7 +27,7 @@ For example, if our input was [1, 2, 3, 4, 5], the expected output would be [120
 
 Follow-up: what if you can't use division?
 
-[Solution](solutions/problem_002.py)
+[Solution](solutions/problem_002/solution.py)
 
 ---
 
@@ -63,10 +62,12 @@ This problem was asked by Jane Street.
 cons(a, b) constructs a pair, and car(pair) and cdr(pair) returns the first and last element of that pair. For example, car(cons(3, 4)) returns 3, and cdr(cons(3, 4)) returns 4.
 
 Given this implementation of cons:
+
 ```python
 def cons(a, b):
     return lambda f : f(a, b)
 ```
+
 Implement car and cdr.
 
 [Solution](solutions/problem_005.py)
@@ -389,9 +390,9 @@ This problem was asked by Facebook.
 
 Implement regular expression matching with the following special characters:
 
-* . (period) which matches any single character
-* \* (asterisk) which matches zero or more of the preceding element
-That is, implement a function that takes in a string and a valid regular expression and returns whether or not the string matches the regular expression.
+- . (period) which matches any single character
+- \* (asterisk) which matches zero or more of the preceding element
+  That is, implement a function that takes in a string and a valid regular expression and returns whether or not the string matches the regular expression.
 
 For example, given the regular expression "ra." and the string "ray", your function should return true. The same regular expression on the string "raymond" should return false.
 
@@ -443,16 +444,15 @@ Each word is guaranteed not to be longer than k.
 
 For example, given the list of words ["the", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"] and k = 16, you should return the following:
 
-["the  quick brown", # 1 extra space on the left
-"fox  jumps  over", # 2 extra spaces distributed evenly
-"the   lazy   dog"] # 4 extra spaces distributed evenly
+["the quick brown", # 1 extra space on the left
+"fox jumps over", # 2 extra spaces distributed evenly
+"the lazy dog"] # 4 extra spaces distributed evenly
 
 [Solution](solutions/problem_028.py)
 
 ---
 
 #### Problem 29
-
 
 This problem was asked by Amazon.
 
@@ -658,9 +658,9 @@ This problem was asked by Amazon.
 
 Implement a stack that has the following methods:
 
-* `push(val)`, which pushes an element onto the stack
-* `pop()`, which pops off and returns the topmost element of the stack. If there are no elements in the stack, then it should throw an error or return null.
-* `max()`, which returns the maximum value in the stack currently. If there are no elements in the stack, then it should throw an error or return null.
+- `push(val)`, which pushes an element onto the stack
+- `pop()`, which pops off and returns the topmost element of the stack. If there are no elements in the stack, then it should throw an error or return null.
+- `max()`, which returns the maximum value in the stack currently. If there are no elements in the stack, then it should throw an error or return null.
 
 Each method should run in constant time.
 
@@ -784,7 +784,7 @@ For example, given the following tree:
 3  2  4  5
 ```
 
-You should return 45, as it is (3 + 2) * (4 + 5).
+You should return 45, as it is (3 + 2) \* (4 + 5).
 
 [Solution](solutions/problem_050.py)
 
@@ -846,8 +846,8 @@ This problem was asked by Microsoft.
 
 Implement a URL shortener with the following methods:
 
-* shorten(url), which shortens the url into a six-character alphanumeric string, such as zLg6wl.
-* restore(short), which expands the shortened string into the original url. If no such shortened string exists, return null.
+- shorten(url), which shortens the url into a six-character alphanumeric string, such as zLg6wl.
+- restore(short), which expands the shortened string into the original url. If no such shortened string exists, return null.
 
 Hint: What if we enter the same URL twice?
 
@@ -940,8 +940,9 @@ This problem was asked by Facebook.
 There is an N by M matrix of zeroes. Given N and M, write a function to count the number of ways of starting at the top-left corner and getting to the bottom-right corner. You can only move right or down.
 
 For example, given a 2 by 2 matrix, you should return 2, since there are two ways to get to the bottom-right:
-* Right, then down
-* Down, then right
+
+- Right, then down
+- Down, then right
 
 Given a 5 by 5 matrix, there are 70 ways to get to the bottom-right.
 
@@ -996,6 +997,7 @@ For example, given the following matrix:
  [11, 12, 13, 14, 15],
  [16, 17, 18, 19, 20]]
 ```
+
 You should print out the following:
 
 ```
@@ -1024,8 +1026,8 @@ This problem was asked by Google.
 
 Implement an LFU (Least Frequently Used) cache. It should be able to be initialized with a cache size n, and contain the following methods:
 
-* `set(key, value)`: sets key to value. If there are already n items in the cache and we are adding a new item, then it should also remove the least frequently used item. If there is a tie, then the least recently used key should be removed.
-* `get(key)`: gets the value at key. If no such key exists, return null. 
+- `set(key, value)`: sets key to value. If there are already n items in the cache and we are adding a new item, then it should also remove the least frequently used item. If there is a tie, then the least recently used key should be removed.
+- `get(key)`: gets the value at key. If no such key exists, return null.
 
 Each operation should run in O(1) time.
 
@@ -1042,6 +1044,7 @@ On our special chessboard, two bishops attack each other if they share the same 
 You are given N bishops, represented as (row, column) tuples on a M by M chessboard. Write a function to count the number of pairs of bishops that attack each other. The ordering of the pair doesn't matter: (1, 2) is considered the same as (2, 1).
 
 For example, given M = 5 and the list of bishops:
+
 ```
 (0, 0)
 (1, 2)
@@ -1071,7 +1074,7 @@ This problem was asked by Facebook.
 
 Given a list of integers, return the largest product that can be made by multiplying any three integers.
 
-For example, if the list is [-10, -10, 5, 2], we should return 500, since that's -10 * -10 * 5.
+For example, if the list is [-10, -10, 5, 2], we should return 500, since that's -10 _ -10 _ 5.
 
 You can assume the list has at least three integers.
 
@@ -1122,6 +1125,7 @@ ABACA
  (2, 3),
  (3, 4)]
 ```
+
 Would have maximum value 3 using the path of vertices `[0, 2, 3, 4], (A, A, C, A)`.
 
 The following input graph:
@@ -1151,7 +1155,7 @@ Given the head of a singly linked list, reverse it in-place.
 
 This problem was asked by Apple.
 
-Suppose you have a multiplication table that is N by N. That is, a 2D array where the value at the i-th row and j-th column is (i + 1) * (j + 1) (if 0-indexed) or i * j (if 1-indexed).
+Suppose you have a multiplication table that is N by N. That is, a 2D array where the value at the i-th row and j-th column is (i + 1) _ (j + 1) (if 0-indexed) or i _ j (if 1-indexed).
 
 Given integers N and X, write a function that returns the number of times X appears as a value in an N by N multiplication table.
 
@@ -1317,6 +1321,7 @@ This problem was asked by Google.
 Invert a binary tree.
 
 For example, given the following tree:
+
 ```
     a
    / \
@@ -1326,6 +1331,7 @@ d   e f
 ```
 
 should become:
+
 ```
   a
  / \
@@ -1396,11 +1402,13 @@ This means this means point A is located northeast of point B.
 means that point A is southwest of C.
 
 Given a list of rules, check if the sum of the rules validate. For example:
+
 ```
 A N B
 B NE C
 C N A
 ```
+
 does not validate, since A cannot be both north and south of C.
 
 ```
@@ -1534,6 +1542,7 @@ This problem was asked by Stripe.
 Write a map implementation with a get function that lets you retrieve the value of a key at a particular time.
 
 It should contain the following methods:
+
 ```
     set(key, value, time): # sets key to value for t = time.
     get(key, time): # gets the key at t = time.
@@ -1571,6 +1580,7 @@ Given a 2D board of characters and a word, find if the word exists in the grid.
 The word can be constructed from letters of sequentially adjacent cell, where "adjacent" cells are those horizontally or vertically neighboring. The same letter cell may not be used more than once.
 
 For example, given the following board:
+
 ```
 [
   ['A','B','C','E'],
@@ -1578,6 +1588,7 @@ For example, given the following board:
   ['A','D','E','E']
 ]
 ```
+
 `exists(board, "ABCCED")` returns true, `exists(board, "SEE")` returns true, `exists(board, "ABCB")` returns false.
 
 [Solution](solutions/problem_098.py)
@@ -1913,6 +1924,7 @@ This question was asked by Zillow.
 You are given a 2-d matrix where each cell represents number of coins in that cell. Assuming we start at `matrix[0][0]`, and can only move right or down, find the maximum number of coins you can collect by the bottom right corner.
 
 For example, in this matrix
+
 ```
 0 3 1 1
 2 0 0 4
@@ -1930,17 +1942,19 @@ The most we can collect is `0 + 2 + 1 + 5 + 3 + 1 = 12` coins.
 This problem was asked by LinkedIn.
 
 Given a string, return whether it represents a number. Here are the different kinds of numbers:
-* "10", a positive integer
-* "-10", a negative integer
-* "10.1", a positive real number
-* "-10.1", a negative real number
-* "1e5", a number in scientific notation
+
+- "10", a positive integer
+- "-10", a negative integer
+- "10.1", a positive real number
+- "-10.1", a negative real number
+- "1e5", a number in scientific notation
 
 And here are examples of non-numbers:
-* "a"
-* "x 1"
-* "a -2"
-* "-"
+
+- "a"
+- "x 1"
+- "a -2"
+- "-"
 
 [Solution](solutions/problem_123.py)
 
@@ -2022,21 +2036,22 @@ The Tower of Hanoi is a puzzle game with three rods and n disks, each a differen
 All the disks start off on the first rod in a stack. They are ordered by size, with the largest disk on the bottom and the smallest one at the top.
 
 The goal of this puzzle is to move all the disks from the first rod to the last rod while following these rules:
-* You can only move one disk at a time.
-* A move consists of taking the uppermost disk from one of the stacks and placing it on top of another stack.
-* You cannot place a larger disk on top of a smaller disk.
+
+- You can only move one disk at a time.
+- A move consists of taking the uppermost disk from one of the stacks and placing it on top of another stack.
+- You cannot place a larger disk on top of a smaller disk.
 
 Write a function that prints out all the steps necessary to complete the Tower of Hanoi. You should assume that the rods are numbered, with the first rod being 1, the second (auxiliary) rod being 2, and the last (goal) rod being 3.
 
 For example, with n = 3, we can do this in 7 moves:
 
-* Move 1 to 3
-* Move 1 to 2
-* Move 3 to 2
-* Move 1 to 3
-* Move 2 to 1
-* Move 2 to 3
-* Move 1 to 3
+- Move 1 to 3
+- Move 1 to 2
+- Move 3 to 2
+- Move 1 to 3
+- Move 2 to 1
+- Move 2 to 3
+- Move 1 to 3
 
 [Solution](solutions/problem_128.py)
 
@@ -2077,9 +2092,10 @@ Given the head to a singly linked list, where each node also has a 'random' poin
 This question was asked by Riot Games.
 
 Design and implement a HitCounter class that keeps track of requests (or hits). It should support the following operations:
-* `record(timestamp)`: records a hit that happened at timestamp
-* `total()`: returns the total number of hits recorded
-* `range(lower, upper)`: returns the number of hits that occurred between timestamps lower and upper (inclusive)
+
+- `record(timestamp)`: records a hit that happened at timestamp
+- `total()`: returns the total number of hits recorded
+- `range(lower, upper)`: returns the number of hits that occurred between timestamps lower and upper (inclusive)
 
 Follow-up: What if our system has limited memory?
 
@@ -2103,6 +2119,7 @@ For example, the inorder successor of 22 is 30.
      /  \
    22    35
 ```
+
 You can assume each node has a parent pointer.
 
 [Solution](solutions/problem_133.py)
@@ -2116,9 +2133,10 @@ This problem was asked by Facebook.
 You have a large array with most of the elements as zero.
 
 Use a more space-efficient data structure, SparseArray, that implements the same interface:
-* `init(arr, size)`: initialize with the original large array and size.
-* `set(i, val)`: updates index at i with val.
-* `get(i)`: gets the value at index i.
+
+- `init(arr, size)`: initialize with the original large array and size.
+- `set(i, val)`: updates index at i with val.
+- `get(i)`: gets the value at index i.
 
 [Solution](solutions/problem_134.py)
 
@@ -2174,9 +2192,10 @@ This problem was asked by Amazon.
 Implement a bit array.
 
 A bit array is a space efficient array that holds a value of 1 or 0 at each index.
-* init(size): initialize the array with size
-* set(i, val): updates index at i with val where val is either 1 or 0.
-* get(i): gets the value at index i.
+
+- init(size): initialize the array with size
+- set(i, val): updates index at i with val where val is either 1 or 0.
+- get(i): gets the value at index i.
 
 [Solution](solutions/problem_137.py)
 
@@ -2263,7 +2282,7 @@ class Stack:
 
 This problem was asked by Google.
 
-You're given a string consisting solely of `(`, `)`, and `*`. 
+You're given a string consisting solely of `(`, `)`, and `*`.
 `*` can represent either a `(`, `)`, or an empty string. Determine whether the parentheses are balanced.
 
 For example, `(()*` and `(*)` are balanced. `)*(` is not balanced.
@@ -2277,10 +2296,11 @@ For example, `(()*` and `(*)` are balanced. `)*(` is not balanced.
 This problem was asked by Amazon.
 
 Given a pivot `x`, and a list `lst`, partition the list into three parts.
-* The first part contains all elements in `lst` that are less than `x`
-* The second part contains all elements in `lst` that are equal to `x`
-* The third part contains all elements in `lst` that are larger than `x`
-Ordering within a part can be arbitrary.
+
+- The first part contains all elements in `lst` that are less than `x`
+- The second part contains all elements in `lst` that are equal to `x`
+- The third part contains all elements in `lst` that are larger than `x`
+  Ordering within a part can be arbitrary.
 
 For example, given `x = 10` and `lst = [9, 12, 3, 5, 14, 10, 10]`, one partition may be `[9, 3, 5, 10, 10, 12, 14]`
 
@@ -2323,6 +2343,7 @@ This question was asked by BufferBox.
 Given a binary tree where all nodes are either 0 or 1, prune the tree so that subtrees containing all 0s are removed.
 
 For example, given the following tree:
+
 ```
    0
   / \
@@ -2334,6 +2355,7 @@ For example, given the following tree:
 ```
 
 should be pruned to:
+
 ```
    0
   / \
@@ -2401,6 +2423,7 @@ For example, given the list of points `[(0, 0), (5, 4), (3, 1)]`, the central po
 Given a 2-D matrix representing an image, a location of a pixel in the screen and a color C, replace the color of the given pixel and all adjacent same colored pixels with C.
 
 For example, given the following matrix, and location pixel of `(2, 2)`, and `'G'` for green:
+
 ```
 B B W
 W W W
@@ -2409,6 +2432,7 @@ B B B
 ```
 
 Becomes
+
 ```
 B B G
 G G G
@@ -2449,12 +2473,14 @@ For example, given words "hello", and "world" and a text content of "dog cat hel
 This problem was asked by Amazon.
 
 Implement a stack API using only a heap. A stack implements the following methods:
-* `push(item)`, which adds an element to the stack
-* `pop()`, which removes and returns the most recently added element (or throws an error if there is nothing on the stack)
+
+- `push(item)`, which adds an element to the stack
+- `pop()`, which removes and returns the most recently added element (or throws an error if there is nothing on the stack)
 
 Recall that a heap has the following operations:
-* `push(item)`, which adds a new key to the heap
-* `pop()`, which removes and returns the max value of the heap
+
+- `push(item)`, which adds a new key to the heap
+- `pop()`, which removes and returns the max value of the heap
 
 [Solution](solutions/problem_154.py)
 
@@ -2513,9 +2539,11 @@ For example, given the following matrix:
  [0, 0, 1],
  [1, 0, 0]]
 ```
+
 Return `2`, as there are only two ways to get to the bottom right:
-* `Right, down, down, right`
-* `Down, right, down, right`
+
+- `Right, down, down, right`
+- `Down, right, down, right`
 
 The top left corner and bottom right corner will always be `0`.
 
@@ -2578,18 +2606,20 @@ For example, given the binary number `1111 0000 1111 0000 1111 0000 1111 0000`, 
 This problem was asked by Square.
 
 Given a list of words, return the shortest unique prefix of each word. For example, given the list:
-* dog
-* cat
-* apple
-* apricot
-* fish
+
+- dog
+- cat
+- apple
+- apricot
+- fish
 
 Return the list:
-* d
-* c
-* app
-* apr
-* f
+
+- d
+- c
+- app
+- apr
+- f
 
 [Solution](solutions/problem_162.py)
 
@@ -2628,11 +2658,12 @@ This problem was asked by Google.
 Given an array of integers, return a new array where each element in the new array is the number of smaller elements to the right of that element in the original input array.
 
 For example, given the array `[3, 4, 9, 6, 1]`, return `[1, 1, 2, 1, 0]`, since:
-* There is 1 smaller element to the right of `3`
-* There is 1 smaller element to the right of `4`
-* There are 2 smaller elements to the right of `9`
-* There is 1 smaller element to the right of `6`
-* There are no smaller elements to the right of `1`
+
+- There is 1 smaller element to the right of `3`
+- There is 1 smaller element to the right of `4`
+- There are 2 smaller elements to the right of `9`
+- There is 1 smaller element to the right of `6`
+- There are no smaller elements to the right of `1`
 
 [Solution](solutions/problem_165.py)
 
@@ -2643,8 +2674,9 @@ For example, given the array `[3, 4, 9, 6, 1]`, return `[1, 1, 2, 1, 0]`, since:
 This problem was asked by Uber.
 
 Implement a 2D iterator class. It will be initialized with an array of arrays, and should implement the following methods:
-* `next()`: returns the next element in the array of arrays. If there are no more elements, raise an exception.
-* `has_next()`: returns whether or not the iterator still has elements left.
+
+- `next()`: returns the next element in the array of arrays. If there are no more elements, raise an exception.
+- `has_next()`: returns whether or not the iterator still has elements left.
 
 For example, given the input `[[1, 2], [3], [], [4, 5, 6]]`, calling `next()` repeatedly should output `1, 2, 3, 4, 5, 6`.
 
@@ -2673,6 +2705,7 @@ This problem was asked by Facebook.
 Given an N by N matrix, rotate it by 90 degrees clockwise.
 
 For example, given the following matrix:
+
 ```
 [[1, 2, 3],
  [4, 5, 6],
@@ -2680,6 +2713,7 @@ For example, given the following matrix:
 ```
 
 you should return:
+
 ```
 [[7, 4, 1],
  [8, 5, 2],
@@ -2795,9 +2829,10 @@ You can assume keys do not contain dots in them, i.e. no clobbering will occur.
 This problem was asked by Microsoft.
 
 Describe and give an example of each of the following types of polymorphism:
-* Ad-hoc polymorphism
-* Parametric polymorphism
-* Subtype polymorphism
+
+- Ad-hoc polymorphism
+- Parametric polymorphism
+- Subtype polymorphism
 
 [Solution](solutions/problem_174.md)
 
@@ -2824,6 +2859,7 @@ For example, given the starting state `a`, number of steps `5000`, and the follo
   ('c', 'c', 0.5)
 ]
 ```
+
 One instance of running this Markov chain might produce `{'a': 3012, 'b': 1656, 'c': 332 }`.
 
 [Solution](solutions/problem_175.py)
@@ -2965,19 +3001,23 @@ This problem was asked by Google.
 Given two rectangles on a 2D graph, return the area of their intersection. If the rectangles don't intersect, return `0`.
 
 For example, given the following rectangles:
+
 ```
 {
     "top_left": (1, 4),
     "dimensions": (3, 3) # width, height
 }
 ```
+
 and
+
 ```
 {
     "top_left": (0, 5),
     "dimensions" (4, 3) # width, height
 }
 ```
+
 return `6`.
 
 [Solution](solutions/problem_185.py)
@@ -3003,6 +3043,7 @@ This problem was asked by Google.
 You are given given a list of rectangles represented by min and max x- and y-coordinates. Compute whether or not a pair of rectangles overlap each other. If one rectangle completely covers another, it is considered overlapping.
 
 For example, given the following rectangles:
+
 ```
 {
     "top_left": (1, 4),
@@ -3176,7 +3217,6 @@ Given an array and a number `k` that's smaller than the length of the array, rot
 
 #### Problem 198
 
-
 This problem was asked by Google.
 
 Given a set of distinct positive integers, find the largest subset such that every pair of elements in the subset `(i, j)` satisfies either `i % j = 0` or `j % i = 0`.
@@ -3322,9 +3362,10 @@ Write a program that computes the length of the longest common subsequence of th
 This problem was asked by Apple.
 
 A Collatz sequence in mathematics can be defined as follows. Starting with any positive integer:
-* If `n` is even, the next number in the sequence is `n / 2`
-* If `n` is odd, the next number in the sequence is `3n + 1`
-It is conjectured that every such sequence eventually reaches the number `1`. Test this conjecture.
+
+- If `n` is even, the next number in the sequence is `n / 2`
+- If `n` is odd, the next number in the sequence is `3n + 1`
+  It is conjectured that every such sequence eventually reaches the number `1`. Test this conjecture.
 
 Bonus: What input `n <= 1000000` gives the longest sequence?
 
@@ -3387,9 +3428,10 @@ This problem was asked by Yelp.
 The horizontal distance of a binary tree node describes how far left or right the node will be when the tree is printed out.
 
 More rigorously, we can define it as follows:
-* The horizontal distance of the root is `0`.
-* The horizontal distance of a left child is `hd(parent) - 1`.
-* The horizontal distance of a right child is `hd(parent) + 1`.
+
+- The horizontal distance of the root is `0`.
+- The horizontal distance of a left child is `hd(parent) - 1`.
+- The horizontal distance of a right child is `hd(parent) + 1`.
 
 For example, for the following tree, `hd(1) = -2`, and `hd(6) = 0`.
 
@@ -3402,7 +3444,7 @@ For example, for the following tree, `hd(1) = -2`, and `hd(6) = 0`.
    /                /
   0                8
 ```
-  
+
 The bottom view of a tree, then, consists of the lowest node at each horizontal distance. If there are two nodes at the same depth and horizontal distance, either is acceptable.
 
 For this tree, for example, the bottom view could be `[0, 1, 3, 6, 8, 9]`.
@@ -3420,6 +3462,7 @@ This problem was asked by Facebook.
 Given a number in Roman numeral format, convert it to decimal.
 
 The values of Roman numerals are as follows:
+
 ```
 {
     'M': 1000,
@@ -3718,10 +3761,11 @@ Given a k-ary tree, determine whether it is symmetric.
 This problem was asked by MIT.
 
 Blackjack is a two player card game whose rules are as follows:
-* The player and then the dealer are each given two cards.
-* The player can then "hit", or ask for arbitrarily many additional cards, so long as their total does not exceed 21.
-* The dealer must then hit if their total is 16 or lower, otherwise pass.
-* Finally, the two compare totals, and the one with the greatest sum not exceeding 21 is the winner.
+
+- The player and then the dealer are each given two cards.
+- The player can then "hit", or ask for arbitrarily many additional cards, so long as their total does not exceed 21.
+- The dealer must then hit if their total is 16 or lower, otherwise pass.
+- Finally, the two compare totals, and the one with the greatest sum not exceeding 21 is the winner.
 
 For this problem, cards values are counted as follows: each card between 2 and 10 counts as their face value, face cards count as 10, and aces count as 1.
 
@@ -3781,9 +3825,10 @@ Given a list of paper citations of a researcher, calculate their h-index.
 This problem was asked by Twitter.
 
 You are given an array of length 24, where each element represents the number of new subscribers during the corresponding hour. Implement a data structure that efficiently supports the following:
-* `update(hour: int, value: int)`: Increment the element at index hour by value.
-* `query(start: int, end: int)`: Retrieve the number of subscribers that have signed up between start and end (inclusive).
-You can assume that all values get cleared at the end of the day, and that you will not be asked for start and end values that wrap around midnight.
+
+- `update(hour: int, value: int)`: Increment the element at index hour by value.
+- `query(start: int, end: int)`: Retrieve the number of subscribers that have signed up between start and end (inclusive).
+  You can assume that all values get cleared at the end of the day, and that you will not be asked for start and end values that wrap around midnight.
 
 [Solution](solutions/problem_242.py)
 
@@ -3885,6 +3930,7 @@ For example, a puzzle of the form:
 --------
  MONEY
 ```
+
 may have the solution:
 
 `{'S': 9, 'E': 5, 'N': 6, 'D': 7, 'M': 1, 'O': 0, 'R': 8, 'Y': 2}`
@@ -3963,6 +4009,7 @@ f         e
         /   \
        g     h
 ```
+
 [Solution](solutions/problem_254.py)
 
 ---
@@ -3974,6 +4021,7 @@ This problem was asked by Microsoft.
 The transitive closure of a graph is a measure of which vertices are reachable from other vertices. It can be represented as a matrix `M`, where `M[i][j] == 1` if there is a path between vertices `i` and `j`, and otherwise `0`.
 
 For example, suppose we are given the following graph in adjacency list form:
+
 ```
 graph = [
     [0, 1, 3],
@@ -3984,6 +4032,7 @@ graph = [
 ```
 
 The transitive closure of this graph would be:
+
 ```
 [1, 1, 1, 1]
 [0, 1, 1, 0]
@@ -4090,6 +4139,7 @@ Here is an example tree (note that only the leaf nodes have letters):
  /             \
 c               s
 ```
+
 With this encoding, cats would be represented as `0000110111`.
 
 Given a dictionary of character frequencies, build a Huffman tree, and use it to determine a mapping between characters and their encoded binary strings.
@@ -4115,10 +4165,11 @@ This problem was asked by Nest.
 Create a basic sentence checker that takes in a stream of characters and determines whether they form valid sentences. If a sentence is valid, the program should print it out.
 
 We can consider a sentence valid if it conforms to the following rules:
-* The sentence must start with a capital letter, followed by a lowercase letter or a space.
-* All other characters must be lowercase letters, separators `(,,;,:)` or terminal marks `(.,?,!,‽)`.
-* There must be a single space between each word.
-* The sentence must end with a terminal mark immediately following a word.
+
+- The sentence must start with a capital letter, followed by a lowercase letter or a space.
+- All other characters must be lowercase letters, separators `(,,;,:)` or terminal marks `(.,?,!,‽)`.
+- There must be a single space between each word.
+- The sentence must end with a terminal mark immediately following a word.
 
 [Solution](solutions/problem_263.py)
 
@@ -4206,9 +4257,10 @@ Given a 32-bit positive integer `N`, determine whether it is a power of four in 
 This problem was asked by Microsoft.
 
 You are given an string representing the initial conditions of some dominoes. Each element can take one of three values:
-* `L`, meaning the domino has just been pushed to the left,
-* `R`, meaning the domino has just been pushed to the right, or
-* `.`, meaning the domino is standing still.
+
+- `L`, meaning the domino has just been pushed to the left,
+- `R`, meaning the domino has just been pushed to the right, or
+- `.`, meaning the domino is standing still.
 
 Determine the orientation of each tile when the dominoes stop falling. Note that if a domino receives a force from the left and right side simultaneously, it will remain upright.
 
@@ -4341,9 +4393,10 @@ This problem was asked by Google.
 UTF-8 is a character encoding that maps each symbol to one, two, three, or four bytes.
 
 For example, the Euro sign, `€`, corresponds to the three bytes `11100010 10000010 10101100`. The rules for mapping characters are as follows:
-* For a single-byte character, the first bit must be zero.
-* For an `n`-byte character, the first byte starts with `n` ones and a zero. The other `n - 1` bytes all start with `10`.
-Visually, this can be represented as follows.
+
+- For a single-byte character, the first bit must be zero.
+- For an `n`-byte character, the first byte starts with `n` ones and a zero. The other `n - 1` bytes all start with `10`.
+  Visually, this can be represented as follows.
 
 ```
  Bytes   |           Byte format
@@ -4387,6 +4440,7 @@ A classroom consists of N students, whose friendships can be represented in an a
     6: [3]
 }
 ```
+
 Each student can be placed in a friend group, which can be defined as the transitive closure of that student's friendship relations. In other words, this is the smallest set such that no student in the group has any friends outside this group. For the example above, the friend groups would be `{0, 1, 2, 5}, {3, 6}, {4}`.
 
 Given a friendship list such as the one above, determine the number of friend groups in the class.
@@ -4499,9 +4553,9 @@ Given an array of buildings as described above, create a function that returns t
 For example, suppose the input consists of the buildings `[(0, 15, 3), (4, 11, 5), (19, 23, 4)]`. In aggregate, these buildings would create a skyline that looks like the one below.
 
 ```
-     ______  
+     ______
     |      |        ___
- ___|      |___    |   | 
+ ___|      |___    |   |
 |   |   B  |   |   | C |
 | A |      | A |   |   |
 |   |      |   |   |   |
@@ -4626,6 +4680,7 @@ A teacher must divide a class of students into two teams to play dodgeball. Unfo
 Given an adjacency list of students and their enemies, write an algorithm that finds a satisfactory pair of teams, or returns `False` if none exists.
 
 For example, given the following enemy graph you should return the teams `{0, 1, 4, 5}` and `{2, 3}`.
+
 ```
 students = {
     0: [3],
@@ -4638,6 +4693,7 @@ students = {
 ```
 
 On the other hand, given the input below, you should return `False`.
+
 ```
 students = {
     0: [3],
@@ -4676,6 +4732,7 @@ A competitive runner would like to create a route that starts and ends at his ho
 Given a dictionary of places of the form `{location: elevation}`, and a dictionary mapping paths between some of these locations to their corresponding distances, find the length of the shortest route satisfying the condition above. Assume the runner's home is location `0`.
 
 For example, suppose you are given the following input:
+
 ```
 elevations = {0: 5, 1: 25, 2: 15, 3: 20, 4: 10}
 paths = {
@@ -4705,6 +4762,7 @@ Pascal's triangle is a triangular array of integers constructed with the followi
 The first row consists of the number 1.
 For each subsequent row, each element is the sum of the numbers directly above it, on either side.
 For example, here are the first few rows:
+
 ```
     1
    1 1
@@ -4810,6 +4868,7 @@ On election day, a voting machine writes data in the form `(voter_id, candidate_
 This problem was asked by Triplebyte.
 
 Implement a data structure which carries out the following operations without resizing the underlying array:
+
 - `add(value)`: Add a value to the set of values.
 - `check(value)`: Check whether a value is in the set.
 
@@ -4826,6 +4885,7 @@ This problem was asked by Uber.
 You are given a 2-d matrix where each cell consists of either `/`, `\`, or an empty space. Write an algorithm that determines into how many regions the slashes divide the space.
 
 For example, suppose the input for a three-by-six grid is the following:
+
 ```
 \    /
  \  /
@@ -4903,6 +4963,7 @@ If either value does not exist, return None.
 This problem was asked by Quantcast.
 
 You are presented with an array representing a Boolean expression. The elements are of two kinds:
+
 - `T` and `F`, representing the values `True` and `False`.
 - `&`, `|`, and `^`, representing the bitwise operators for `AND`, `OR`, and `XOR`.
 
@@ -4955,6 +5016,7 @@ An element is considered a peak if it is greater than both its left and right ne
 This problem was asked by Wayfair.
 
 You are given a `2 x N` board, and instructed to completely cover the board with the following shapes:
+
 - Dominoes, or `2 x 1` rectangles.
 - Trominoes, or L-shapes.
 
@@ -5006,6 +5068,7 @@ This problem was asked by Google.
 In linear algebra, a Toeplitz matrix is one in which the elements on any given diagonal from top left to bottom right are identical.
 
 Here is an example:
+
 ```
 1 2 3 4 8
 5 1 2 3 4
@@ -5084,6 +5147,7 @@ This problem was asked by PagerDuty.
 Given a positive integer `N`, find the smallest number of steps it will take to reach `1`.
 
 There are two kinds of permitted steps:
+
 - You may decrement `N` to `N - 1`.
 - If `a * b = N`, you may decrement `N` to the larger of `a` and `b`.
 
@@ -5157,7 +5221,7 @@ For example, given the sequence `[3, 2, 6, 1, 9]`, the resulting Cartesian tree 
 
 ```
       1
-    /   \   
+    /   \
   2       9
  / \
 3   6
@@ -5384,17 +5448,20 @@ This problem was asked by Google.
 You are given an N by N matrix of random letters and a dictionary of words. Find the maximum number of words that can be packed on the board from the given dictionary.
 
 A word is considered to be able to be packed on the board if:
+
 - It can be found in the dictionary
 - It can be constructed from untaken letters by other words found so far on the board
 - The letters are adjacent to each other (vertically and horizontally, not diagonally).
 - Each tile can be visited only once by any word.
 
 For example, given the following dictionary:
+
 ```
 { 'eat', 'rain', 'in', 'rat' }
 ```
 
 and matrix:
+
 ```
 [['e', 'a', 'n'],
  ['t', 't', 'i'],
@@ -5438,6 +5505,7 @@ This problem was asked by Google.
 Given a binary search tree and a range `[a, b]` (inclusive), return the sum of the elements of the binary search tree within the range.
 
 For example, given the following tree:
+
 ```
     5
    / \
@@ -5459,11 +5527,12 @@ This problem was asked by Adobe.
 You are given a tree with an even number of nodes. Consider each connection between a parent and child node to be an "edge". You would like to remove some of these edges, such that the disconnected subtrees that remain each have an even number of nodes.
 
 For example, suppose your input was the following tree:
+
 ```
    1
-  / \ 
+  / \
  2   3
-    / \ 
+    / \
    4   5
  / | \
 6  7  8
@@ -5484,6 +5553,7 @@ This problem was asked by Google.
 You are given a set of synonyms, such as `(big, large)` and `(eat, consume)`. Using this set, determine if two sentences with the same number of words are equivalent.
 
 For example, the following two sentences are equivalent:
+
 - "He wants to eat food."
 - "He wants to consume food."
 
@@ -5517,7 +5587,7 @@ For example, our traveler wants to go from JFK to LAX with up to 3 connections, 
 ]
 ```
 
-Due to some improbably low flight prices, the cheapest itinerary would be JFK -> ATL -> ORD -> LAX, costing $440.
+Due to some improbably low flight prices, the cheapest itinerary would be JFK -> ATL -> ORD -> LAX, costing \$440.
 
 [Solution](solutions/problem_346.py)
 
@@ -5542,17 +5612,19 @@ For example, suppose we are given the string `daily` and `k = 1`. The best we ca
 This problem was asked by Zillow.
 
 A ternary search tree is a trie-like data structure where each node may have up to three children. Here is an example which represents the words `code`, `cob`, `be`, `ax`, `war`, and `we`.
+
 ```
        c
     /  |  \
    b   o   w
  / |   |   |
 a  e   d   a
-|    / |   | \ 
+|    / |   | \
 x   b  e   r  e
 ```
 
 The tree is structured according to the following rules:
+
 - left child nodes link to words lexicographically earlier than the parent prefix
 - right child nodes link to words lexicographically later than the parent prefix
 - middle child nodes continue the current word
@@ -5574,18 +5646,19 @@ Soundex is an algorithm used to categorize phonetically, such that two names tha
 Soundex maps every name to a string consisting of one letter and three numbers, like `M460`.
 
 One version of the algorithm is as follows:
+
 - Remove consecutive consonants with the same sound (for example, change `ck -> c`).
 - Keep the first letter. The remaining steps only apply to the rest of the string.
 - Remove all vowels, including `y`, `w`, and `h`.
 - Replace all consonants with the following digits:
-    ```
-    b, f, p, v -> 1
-    c, g, j, k, q, s, x, z -> 2
-    d, t -> 3
-    l -> 4
-    m, n -> 5
-    r -> 6
-    ```
+  ```
+  b, f, p, v -> 1
+  c, g, j, k, q, s, x, z -> 2
+  d, t -> 3
+  l -> 4
+  m, n -> 5
+  r -> 6
+  ```
 
 If you don't have three numbers yet, append zeros until you do. Keep the first three numbers.
 Using this scheme, `Jackson` and `Jaxen` both map to `J250`.
@@ -5603,6 +5676,7 @@ This problem was asked by Uber.
 Write a program that determines the smallest number of perfect squares that sum up to `N`.
 
 Here are a few examples:
+
 - Given `N = 4`, return `1` `(4)`
 - Given `N = 17`, return `2` `(16 + 1)`
 - Given `N = 18`, return `2` `(9 + 9)`
@@ -5618,6 +5692,7 @@ This problem was asked by Quora.
 Word sense disambiguation is the problem of determining which sense a word takes on in a particular setting, if that word has multiple meanings. For example, in the sentence "I went to get money from the bank", bank probably means the place where people deposit money, not the land beside a river or lake.
 
 Suppose you are given a list of meanings for several words, formatted like so:
+
 ```
 {
     "word_1": ["meaning one", "meaning two", ...],
@@ -5637,6 +5712,7 @@ Given a sentence, most of whose words are contained in the meaning list above, c
 This problem was asked by Palantir.
 
 A typical American-style crossword puzzle grid is an `N x N` matrix with black and white squares, which obeys the following rules:
+
 - Every white square must be part of an "across" word and a "down" word.
 - No word can be fewer than three letters long.
 - Every white square must be reachable from every other white square.
@@ -5656,7 +5732,7 @@ You are given a histogram consisting of rectangles of different heights. These h
 
 ```
       x
-      x  
+      x
   x   x
   x x x
 x x x x
@@ -5677,6 +5753,7 @@ Design a system to crawl and copy all of Wikipedia using a distributed network o
 More specifically, suppose your server has access to a set of client machines. Your client machines can execute code you have written to access Wikipedia pages, download and parse their data, and write the results to a database.
 
 Some questions you may want to consider as part of your solution are:
+
 - How will you reach as many pages as possible?
 - How can you keep track of pages that have already been visited?
 - How will you deal with your client machines being blacklisted?
@@ -5693,6 +5770,7 @@ This problem was asked by Airbnb.
 You are given an array `X` of floating-point numbers `x1, x2, ... xn`. These can be rounded up or down to create a corresponding array `Y` of integers `y1, y2, ... yn`.
 
 Write an algorithm that finds an appropriate `Y` array with the following properties:
+
 - The rounded sums of both arrays should be equal.
 - The absolute pairwise difference between elements is minimized. In other words, `|x1- y1| + |x2- y2| + ... + |xn- yn|` should be as small as possible.
 
@@ -5723,6 +5801,7 @@ You are given a binary tree in a peculiar string representation. Each node is wr
 If either `l` or `r` is null, it will be represented as a zero. Otherwise, it will be represented by a new `(lr)` pair.
 
 Here are a few examples:
+
 - A root node with no children: `(00)`
 - A root node with two children: `((00)(00))`
 - An unbalanced tree with three consecutive left children: `((((00)0)0)0)`
@@ -5738,6 +5817,7 @@ Given this representation, determine the depth of the tree.
 This problem was asked by Dropbox.
 
 Create a data structure that performs all the following operations in `O(1)` time:
+
 - `plus`: Add a key with value 1. If the key already exists, increment its value by one.
 - `minus`: Decrement the value of a key. If the key's value is currently 1, remove it.
 - `get_max`: Return a key with the highest value.
@@ -5836,6 +5916,7 @@ Describe an algorithm to compute the longest increasing subsequence of an array 
 This problem was asked by Google.
 
 A quack is a data structure combining properties of both stacks and queues. It can be viewed as a list of elements written left to right such that three operations are possible:
+
 - `push(x)`: add a new item `x` to the left end of the list
 - `pop()`: remove and return the item on the left end of the list
 - `pull()`: remove the item on the right end of the list.
@@ -5845,4 +5926,3 @@ Implement a quack using three stacks and `O(1)` additional memory, so that the a
 [Solution](solutions/problem_365.py)
 
 ---
-
